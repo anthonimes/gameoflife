@@ -39,6 +39,7 @@ public class LinkedList<T extends Comparable<T>> {
 
     /**
      * Computes the size of the list
+     *
      * @result the size of the list
      */
     public int size() {
@@ -80,7 +81,7 @@ public class LinkedList<T extends Comparable<T>> {
      */
     public void add_end(Node<T> n) {
 
-        // Is the list empty?
+// Is the list empty?
         Node<T> tmp = head;
 
         if (tmp == null) {
@@ -105,7 +106,7 @@ public class LinkedList<T extends Comparable<T>> {
         Node<T> prec = null;
 
         while (tmp != null) {
-            // If the value of tmp is greater than the value of n, we stop
+// If the value of tmp is greater than the value of n, we stop
             if (n.compareTo(tmp) < 0) {
                 break;
             }
@@ -113,10 +114,10 @@ public class LinkedList<T extends Comparable<T>> {
             tmp = tmp.get_next();
         }
 
-        // The head is greater than the node to add
+// The head is greater than the node to add
         if (tmp == head)
             this.add_beginning(n);
-            // The node is greater than all other values in list
+// The node is greater than all other values in list
         else if (prec == null)
             this.add_end(n);
         else {
@@ -136,7 +137,7 @@ public class LinkedList<T extends Comparable<T>> {
 
         }
 
-        // We exit the while loop with tmp.get_next() == n or tmp == null
+// We exit the while loop with tmp.get_next() == n or tmp == null
         if (tmp == null) {
             return false;
         } else {
